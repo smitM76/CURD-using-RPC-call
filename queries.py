@@ -27,9 +27,7 @@ def display_data():
                 "comment": user.comment
             }
             user_list.append(values)
-            # print(user_list)
         session.close()
-    # print(user_list)
     return user_list
 
 

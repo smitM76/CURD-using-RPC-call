@@ -7,7 +7,6 @@ from LOGCONFIG.dict_config import config
 logging.config.dictConfig(config)
 
 logger = logging.getLogger(__name__)
-# logger.setLevel('ERROR')
 
 connection = pika.BlockingConnection(
     pika.ConnectionParameters(host='localhost'))

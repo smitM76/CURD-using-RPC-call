@@ -6,25 +6,11 @@ import json
 import logging
 from logging.config import dictConfig
 
-"""
-
-try:
-    file = open('logging_config.ini', "r")
-except FileNotFoundError as e:
-    pass
-
-try:
-    config = json.load(file)
-except json.JSONDecodeError as e:
-    pass
-dictConfig(config)
-
-"""
 file = open('logging_config.ini', "r")
 config = json.load(file)
 dictConfig(config)
 
-logger = logging.getLogger('connection_module')
+logger = logging.getLogger(__name__)
 
 
 Base = declarative_base()

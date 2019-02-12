@@ -5,10 +5,6 @@ import logging
 from logging.config import dictConfig
 import argparse
 
-#connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
-#channel = connection.channel()
-# channel.queue_declare(queue='rpc_queue')
-
 
 class Rpc_client(object):
     def __init__(self):
@@ -43,9 +39,6 @@ class Rpc_client(object):
 parser = argparse.ArgumentParser()
 parser.add_argument('method', help='Select The Method',
                     choices=["GET", "POST", "PUT", "DELETE"])
-# parser.add_argument('id', help='id', type=int)
-# parser.add_argument('username', help='username', type=str)
-# parser.add_argument('comment', help='comment', type=str)
 
 args, sub_args = parser.parse_known_args()
 if args.method == 'GET':

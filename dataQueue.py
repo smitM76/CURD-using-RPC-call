@@ -1,3 +1,7 @@
+"""
+create db file if not exists
+create table 
+"""
 from sqlalchemy import create_engine, Integer, String, ForeignKey, Column
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship

@@ -1,3 +1,5 @@
+"""performs CURD operations
+"""
 from sqlalchemy.orm import sessionmaker
 from dataQueue import engine, User, config
 import sqlalchemy.exc
@@ -9,6 +11,7 @@ logging.config.dictConfig(config)
 
 logger = logging.getLogger(__name__)
 
+# creating session to intract with database
 Session = sessionmaker(bind=engine)
 
 

@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
        # self.connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
 """
 connection = pika.BlockingConnection(
-    pika.ConnectionParameters(host='localhost'))
+    pika.ConnectionParameters(host='172.17.0.1'))
 
 channel = connection.channel()
 
